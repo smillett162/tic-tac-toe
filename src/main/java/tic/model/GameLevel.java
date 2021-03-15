@@ -32,7 +32,6 @@ public class GameLevel implements Level{
 
     @Override
     public boolean placeObject(int x, int y, boolean naughts) {
-        System.out.println(board*0.3);
         boolean success = false;
         if (placements[x][y] == null){
             Entity entity = new GameEntity(getCoordinate(x, width), getCoordinate(y, height), board*0.3, naughts);
@@ -72,7 +71,6 @@ public class GameLevel implements Level{
                 break;
             }
         }
-        System.out.println(win);
         return win;
     }
 
